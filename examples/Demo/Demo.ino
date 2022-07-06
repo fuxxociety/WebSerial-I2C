@@ -25,6 +25,7 @@ const char* ssid = ""; // Your WiFi SSID
 const char* password = ""; // Your WiFi Password
 
 /* I2C Pin Assignments */
+/* These are raw GPIOs, (D2 == GPIO4 == SDA) (D1 == GPIO5 == SCL)
 const char sda_pin = D2;
 const char scl_pin = D1;
 
