@@ -25,7 +25,7 @@ const char* ssid = ""; // Your WiFi SSID
 const char* password = ""; // Your WiFi Password
 
 /* I2C Pin Assignments */
-/* These are raw GPIOs, (D2 == GPIO4 == SDA) (D1 == GPIO5 == SCL)
+/* These are raw GPIOs, (D2 == GPIO4 == SDA) (D1 == GPIO5 == SCL) */
 const char sda_pin = D2;
 const char scl_pin = D1;
 
@@ -33,7 +33,7 @@ bool buf[4096];
 bool* bufI = &buf[0];
 const uint32_t PAUSE = 1 << 20;
 
-/* Message callback of WebSerial */
+/* Message callback of WebSerial  <-- FIXME Need to modify void recvMsg() to handle I2C output*/
 #void recvMsg(uint8_t *data, size_t len){
 #  WebSerial.println("Received Data...");
 #  String d = "";
